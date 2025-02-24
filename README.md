@@ -1,16 +1,83 @@
 # MindfulSpace - Mental Health Support Platform
 
-A comprehensive mental health support platform built with React, TypeScript, and Supabase.
+A comprehensive mental health support platform built with modern web technologies, focused on providing accessible mental health resources and support.
+
+## Overview
+
+MindfulSpace is a web application designed to provide mental health support through various features including support groups, real-time chat, appointment scheduling, and community forums. The platform emphasizes user privacy, accessibility, and real-time interaction.
 
 ## Features
 
-- User authentication and authorization
-- Support group management
-- Real-time chat support
-- Appointment scheduling
-- Community forum
-- Mood detection
-- Admin dashboard
+- **User Authentication & Authorization**
+  - Secure email/password authentication
+  - Role-based access control (User/Admin)
+  - Protected routes and content
+
+- **Support Groups**
+  - Join therapeutic support groups
+  - Real-time group chat
+  - Session scheduling
+  - Resource sharing
+
+- **Real-time Chat Support**
+  - Instant messaging with support staff
+  - Message read receipts
+  - Typing indicators
+  - Chat history
+
+- **Appointment Scheduling**
+  - Book consultations
+  - Manage appointments
+  - Automated status updates
+  - Cancellation handling
+
+- **Community Forum**
+  - Create and manage posts
+  - Categorized discussions
+  - Moderation tools
+  - User interactions
+
+- **Mood Detection**
+  - Facial expression analysis
+  - Real-time mood tracking
+  - Privacy-focused implementation
+  - Personalized feedback
+
+- **Admin Dashboard**
+  - User management
+  - Support group oversight
+  - Appointment tracking
+  - Content moderation
+
+## Technology Stack
+
+### Frontend
+
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React (Icons)
+
+### Backend & Infrastructure
+
+- Supabase (Backend as a Service)
+  - PostgreSQL Database
+  - Real-time subscriptions
+  - Row Level Security
+  - Authentication
+
+### Development Tools
+
+- ESLint
+- PostCSS
+- Autoprefixer
+
+### Deployment
+
+- Netlify
+- Progressive Web App (PWA) support
+- Service Worker for offline functionality
 
 <details>
 <summary>Local Development Setup</summary>
@@ -31,6 +98,7 @@ VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
 To get these values:
+
 1. Go to your Supabase project dashboard
 2. Click on Settings -> API
 3. Copy the Project URL and anon/public key
@@ -38,17 +106,20 @@ To get these values:
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd mindful-space
 ```
 
-2. Install dependencies:
+1. Install dependencies:
+
 ```bash
 npm install
 ```
 
-3. Start the development server:
+1. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -82,6 +153,7 @@ To test the full functionality locally:
    - Ensure they match your Supabase production credentials
 
 2. Build the project:
+
 ```bash
 npm run build
 ```
@@ -158,35 +230,10 @@ The application will remain connected to your Supabase database as long as:
 3. RLS policies are properly configured
 4. CORS settings in Supabase allow your deployment domain
 
-### Troubleshooting
-
-Common issues and solutions:
-
-1. Authentication Issues:
-   - Verify environment variables
-   - Check CORS settings in Supabase
-   - Ensure proper redirect URLs in Supabase auth settings
-
-2. Real-time Connection Issues:
-   - Verify WebSocket connections
-   - Check Supabase project status
-   - Confirm network access to Supabase
-
-3. Database Access Issues:
-   - Verify RLS policies
-   - Check user roles and permissions
-   - Confirm database connection strings
-
-4. DNS/HTTPS Issues:
-   - Confirm DNS records match Netlify's requirements
-   - Wait for DNS propagation
-   - Check SSL certificate status
-   - Verify HTTPS is forced in Netlify settings
-
 </details>
 
 <details>
-<summary>Admin Setup Guide</summary>
+<summary>Admin Setup</summary>
 
 ### Setting Up Admin Access
 
@@ -202,12 +249,14 @@ WHERE id = 'YOUR_USER_ID';
 ```
 
 To find your user ID:
+
 - Look in the URL after logging in, or
 - Check the Supabase Authentication > Users section
 
 ### Admin Features
 
 Once promoted to admin, you can:
+
 - Manage users
 - Monitor support groups
 - Handle appointments
@@ -215,3 +264,74 @@ Once promoted to admin, you can:
 - Access admin dashboard
 
 </details>
+
+<details>
+<summary>Troubleshooting</summary>
+
+### Authentication Issues
+
+- Verify environment variables
+- Check CORS settings in Supabase
+- Ensure proper redirect URLs in Supabase auth settings
+
+### Real-time Connection Issues
+
+- Verify WebSocket connections
+- Check Supabase project status
+- Confirm network access to Supabase
+
+### Database Access Issues
+
+- Verify RLS policies
+- Check user roles and permissions
+- Confirm database connection strings
+
+### DNS/HTTPS Issues
+
+- Confirm DNS records match Netlify's requirements
+- Wait for DNS propagation
+- Check SSL certificate status
+- Verify HTTPS is forced in Netlify settings
+
+</details>
+
+## Security Features
+
+- Row Level Security (RLS) policies
+- Secure authentication flows
+- Protected API endpoints
+- Real-time connection security
+- Data encryption at rest
+
+## Progressive Web App
+
+The application includes PWA support with:
+
+- Offline functionality
+- App manifest
+- Service worker
+- Push notifications (coming soon)
+- Install prompts
+
+## Contributors
+
+- Terrell D Lemons - Lead Developer
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For support or inquiries, please contact:
+
+- Email: <support@mindfulspace.org>
+- Website: <https://mindful-space.org>
+
+## Acknowledgments
+
+Special thanks to:
+
+- The React team for the excellent framework
+- Supabase for the robust backend infrastructure
+- The open-source community for various tools and libraries

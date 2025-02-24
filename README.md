@@ -79,6 +79,10 @@ MindfulSpace is a web application designed to provide mental health support thro
 - Progressive Web App (PWA) support
 - Service Worker for offline functionality
 
+---
+
+## SetUp Guide
+
 <details>
 <summary>Local Development Setup</summary>
 
